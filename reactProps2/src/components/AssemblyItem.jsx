@@ -17,7 +17,7 @@ const AssemblyItem = (props) => {
         </a>
       </div>
       <div class="item-details">
-        <p class="item-title">{title.length > 50 ? title.slice(0, 5) + '...' : title}</p>
+        <p class={`item-title ${title.length > 50 ? 'hidden-text' : ''}`}>{title}</p>
         <p class="item-price">{currency_code === 'USD' ? '$' :currency_code === 'EUR' ? '€' : currency_code}{price}</p>
         <p class={`tem-quantity ${quantity > 20 ? 'level-high' : quantity > 10 ? 'level-medium' : 'level-low'}`}>{quantity} left</p>
       </div>
