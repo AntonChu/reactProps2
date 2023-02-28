@@ -10,19 +10,19 @@ const AssemblyItem = (props) => {
     const quantity = props.quantity;
 
   return (
-    <div class="item" key={listig_id}>
-      <div class="item-image">
+    <div className="item" key={listig_id}>
+      <div className="item-image">
         <a href={url}>
           <img src={MainImage} />
         </a>
       </div>
-      <div class="item-details">
-        <p class={`item-title ${title.length > 50 ? 'hidden-text' : ''}`}>{title}</p>
-        <p class="item-price">{currency_code === 'USD' ? '$' :currency_code === 'EUR' ? '€' : currency_code}{price}</p>
-        <p class={`tem-quantity ${quantity > 20 ? 'level-high' : quantity > 10 ? 'level-medium' : 'level-low'}`}>{quantity} left</p>
+      <div className="item-details">
+        <p className={`item-title hidden-text`}>{title}</p>
+        <p className="item-price">{currency_code === 'USD' ? '$' :currency_code === 'EUR' ? '€' : currency_code}{price}</p>
+        <p className={`tem-quantity ${quantity > 20 ? 'level-high' : quantity > 10 ? 'level-medium' : 'level-low'}`}>{quantity} left</p>
       </div>
     </div>
-    )
+  )
 }
 
 AssemblyItem.propTypes = {
